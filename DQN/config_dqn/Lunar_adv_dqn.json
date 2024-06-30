@@ -1,0 +1,11 @@
+{
+    "env_id": "LunarLander-v2",
+    "training_config": {
+        "robust": false,
+        "adv_train": true
+    },
+    "test_config":{
+		"load_model_path": "output_dqn/LunarLander-v2_adv/20242406_2255/best_models/idx_884975_epi_1300.pth",
+		"load_folder_path": "output_dqn/LunarLander-v2_adv/20242406_2255"
+    }
+}

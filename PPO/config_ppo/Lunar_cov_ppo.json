@@ -1,0 +1,56 @@
+{   
+    
+    "env_id": "LunarLander-v2",
+    "state_min": [-1.5, -1.5, -5.0, -5.0, -3.14, -5.0, -0.0, -0.0],
+	"state_max": [1.5, 1.5, 5.0, 5.0, 3.14, 5.0, 1.0, 1.0],
+    "mode": "robust_ppo",
+    "train_iterations": 1500,
+    "seed": 32,
+    "num_steps": 3000,
+    "policy_activation": "tanh",
+    "policy_net_type": "ContinuousPolicy",
+    "value_net_type": "ValueNet",
+    "initialization": "orthogonal",
+    "value_epochs": 10,
+    "ppo_epochs": 10,
+    "num_minibatches": 32,
+
+    "anneal_lr": true,
+    "ppo_lr": 0.0001,
+    "val_lr": 0.00025,
+
+    "gamma": 0.99,
+    "lambda": 0.95,
+
+    "adam_eps": 1e-05,
+    "adv_adversary_ratio": 1.0,
+
+    "clip_eps": 0.2,
+
+    "entropy_coeff": 0.0,
+
+    "attack_eps": 0.01,
+
+    "robust_ppo_beta": 1.0,
+    "robust_ppo_beta_scheduler_opts": "start=1,length=700",
+    "robust_ppo_eps_scheduler_opts": "start=1,length=700",
+    "kappa": 0.025,
+
+    "clip_grad_norm": -1,
+    "save_iters": 100,
+
+    "attack_method": "none",
+    "attack_steps": 10,
+    "num_episodes": 100,
+
+    "sarsa_enable":  false,
+    "attack_sarsa_action_ratio": 0.5,
+    "sarsa_eps": 0.3,
+    "sarsa_reg": 0.3,
+    "sarsa_steps": true,
+    "sarsa_model_path": "sarsa_test.model",
+
+    "base_test_path": "output_ppo/LunarLander-v2_cov/20240623_1626",
+    "load_model": "best_model/iter_1366"
+    
+}
